@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import correctUrl from '../HOC/correctUrl';
 
 const Formulae = () => {
   return (
@@ -66,7 +67,8 @@ const Formulae = () => {
       </div>
         </div>
       </div>
-      <Link to="/test" className="btn">Тест</Link>
+      <Link to={location => correctUrl(location.pathname, 'test')}
+        className="btn">Тест</Link>
     </div>
   )
 }
