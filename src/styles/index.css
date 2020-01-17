@@ -30,6 +30,11 @@
   padding-left: 10px;
   padding-right: 10px;
 }
+  .formulae__formula{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+} 
 .formulae__wrapper {
   display: flex;
   flex-wrap: wrap;
