@@ -6,7 +6,7 @@ const Formulae = () => {
   return (
     <div className="formulae">
       <div className="formulae__block">
-        <h2 className="formulae__title">
+        <h2 className="formulae__title title">
           Формула n-го члена а.п
     </h2>
         <div className="formulae__wrapper">
@@ -16,7 +16,7 @@ const Formulae = () => {
         </div>
       </div>
       <div className="formulae__block">
-        <h2 className="formulae__title">
+        <h2 className="formulae__title title">
           Формула разности а.п
     </h2>
         <div className="formulae__wrapper">
@@ -33,7 +33,7 @@ const Formulae = () => {
         </div>
       </div>
       <div className="formulae__block">
-        <h2 className="formulae__title">
+        <h2 className="formulae__title title">
           Формула, объясняющая название а.п
         </h2>
         <div className="formulae__wrapper">
@@ -47,7 +47,7 @@ const Formulae = () => {
         </div>
       </div>
       <div className="formulae__block">
-        <h2 className="formulae__title">
+        <h2 className="formulae__title title">
           Формула суммы n-первых членов а.п
     </h2>
         <div className="formulae__wrapper">
