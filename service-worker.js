@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/Arithmetic-progression/precache-manifest.5f6c0669ea2815301baebf30bee88602.js"
+  "/Arithmetic-progression/precache-manifest.e7641efe57715fe86f9394bd2b61294f.js"
 );
 
 self.addEventListener('message', (event) => {
