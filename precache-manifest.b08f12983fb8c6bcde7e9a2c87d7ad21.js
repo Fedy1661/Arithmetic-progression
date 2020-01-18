@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "d59eee69948d86735eca56938003f53c",
+    "revision": "c38701110c9a29f7b9ea9cc64500ea4c",
     "url": "/Arithmetic-progression/index.html"
   },
   {
-    "revision": "90cd5b789c51e8d72716",
+    "revision": "afba6849718222cf5a59",
     "url": "/Arithmetic-progression/static/css/main.d9f4cb9d.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Arithmetic-progression/static/js/2.575ec35b.chunk.js.LICENSE"
   },
   {
-    "revision": "90cd5b789c51e8d72716",
-    "url": "/Arithmetic-progression/static/js/main.ccd3d357.chunk.js"
+    "revision": "afba6849718222cf5a59",
+    "url": "/Arithmetic-progression/static/js/main.0c0a2b24.chunk.js"
   },
   {
     "revision": "0a1c5b075eade69aed27",

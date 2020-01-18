@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/Arithmetic-progression/static/css/main.d9f4cb9d.chunk.css",
-    "main.js": "/Arithmetic-progression/static/js/main.ccd3d357.chunk.js",
-    "main.js.map": "/Arithmetic-progression/static/js/main.ccd3d357.chunk.js.map",
+    "main.js": "/Arithmetic-progression/static/js/main.0c0a2b24.chunk.js",
+    "main.js.map": "/Arithmetic-progression/static/js/main.0c0a2b24.chunk.js.map",
     "runtime-main.js": "/Arithmetic-progression/static/js/runtime-main.d6655622.js",
     "runtime-main.js.map": "/Arithmetic-progression/static/js/runtime-main.d6655622.js.map",
     "static/js/2.575ec35b.chunk.js": "/Arithmetic-progression/static/js/2.575ec35b.chunk.js",
     "static/js/2.575ec35b.chunk.js.map": "/Arithmetic-progression/static/js/2.575ec35b.chunk.js.map",
     "index.html": "/Arithmetic-progression/index.html",
-    "precache-manifest.0cf71fed4b0ab1980d9ff8fed3c5b6ee.js": "/Arithmetic-progression/precache-manifest.0cf71fed4b0ab1980d9ff8fed3c5b6ee.js",
+    "precache-manifest.b08f12983fb8c6bcde7e9a2c87d7ad21.js": "/Arithmetic-progression/precache-manifest.b08f12983fb8c6bcde7e9a2c87d7ad21.js",
     "service-worker.js": "/Arithmetic-progression/service-worker.js",
     "static/css/main.d9f4cb9d.chunk.css.map": "/Arithmetic-progression/static/css/main.d9f4cb9d.chunk.css.map",
     "static/js/2.575ec35b.chunk.js.LICENSE": "/Arithmetic-progression/static/js/2.575ec35b.chunk.js.LICENSE"
@@ -17,6 +17,6 @@
     "static/js/runtime-main.d6655622.js",
     "static/js/2.575ec35b.chunk.js",
     "static/css/main.d9f4cb9d.chunk.css",
-    "static/js/main.ccd3d357.chunk.js"
+    "static/js/main.0c0a2b24.chunk.js"
   ]
 }
