@@ -1,5 +1,4 @@
 import correctUrl from './correctUrl';
+import withFormula from './withFormula';
 
-export {
-  correctUrl
-}
+export { correctUrl, withFormula };

@@ -13,12 +13,12 @@ class App extends Component {
           <hr />
           <Switch>
             <Route path="/" component={Formulae} exact />
-            <Route path='/test' component={Testing} />
+            <Route path="/test" component={Testing} />
             <NotFound />
           </Switch>
         </div>
       </Router>
-    )
+    );
   }
 }
 

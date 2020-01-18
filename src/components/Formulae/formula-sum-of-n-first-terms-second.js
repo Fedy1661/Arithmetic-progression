@@ -1,8 +1,12 @@
 import React from 'react';
+import { connect } from 'react-redux';
+import { selectAnswer } from '../../actions';
+import { compose } from '../../util';
+import { withFormula } from '../HOC';
 
-export default () => {
+const formula = () => {
   return (
-    <div className="formulae__formula">
+    <>
       <div className="">
         S<sub>n</sub> =
       </div>
@@ -13,6 +17,19 @@ export default () => {
         <span className="bottom">2</span>
       </span>{' '}
       × n
-    </div>
+    </>
   );
 };
+
+const mapStateToProps = ({ selectedAnswers }) => {
+  return { selectedAnswers };
+};
+
+const mapDispatchToProps = {
+  selectAnswer
+};
+
+export default compose(
+  connect(mapStateToProps, mapDispatchToProps),
+  withFormula
+)(formula);
