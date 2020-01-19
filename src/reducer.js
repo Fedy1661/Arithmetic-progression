@@ -115,7 +115,6 @@ export default (state = initialState, { type, payload }) => {
       } else {
         win = win >= 1 ? 1 : 0;
       }
-      console.log(` Запишет ${[...state.answers, [...state.selectedAnswers]]}`)
       return {
         ...state,
         rightAnswers: state.rightAnswers + win,

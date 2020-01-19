@@ -166,3 +166,12 @@ b {
   margin: 0 auto;
   text-align: center;
 }
+@media(max-width: 424px){
+  .container{
+    max-width: 95%;
+  }
+  .testing__btn {
+    margin: 5px;
+    margin-top: 10px;
+  }
+}
