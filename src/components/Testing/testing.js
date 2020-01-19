@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { generateTest, nextQuestion } from '../../actions';
+import { generateTest, nextQuestion, selectAnswer } from '../../actions';
 import { connect } from 'react-redux';
 import { Redirect } from 'react-router-dom';
 
@@ -11,7 +11,13 @@ class Testing extends Component {
     this.props.generateTest();
   }
   render() {
-    const { test, actualQuestion, rightAnswers, generateTest } = this.props;
+    const {
+      test,
+      actualQuestion,
+      rightAnswers,
+      generateTest,
+      answers
+    } = this.props;
     const { redirect } = this.state;
     const questions = actualQuestion !== null && actualQuestion !== 4 && (
       <>
@@ -36,11 +42,43 @@ class Testing extends Component {
     const result = actualQuestion === 4 && (
       <>
         <h2 className="testing__title">{`Результат ${rightAnswers}/${test.length}`}</h2>
+        {test.map((testValue, testId) => {
+          return (
+            <>
+              <h3 className="testing__question title">
+                {`${testValue.question} #${test.indexOf(testValue) + 1}`}
+              </h3>
+              <div className="testing__variants">
+                {testValue.variants.map((value, key) => {
+                  let selected = false;
+                  console.log(answers[testId], key)
+                  if (answers[testId].indexOf(key) !== -1) {
+                    selected = true;
+                    console.log('TUREEE')
+                  }
+                  return React.cloneElement(value[0], {
+                    key,
+                    id: key,
+                    status: value[1],
+                    selected
+                  });
+                })}
+              </div>
+              {/* {test[actualQuestion].variants.map((value, key) => {
+                return React.cloneElement(value[0], {
+                  key,
+                  id: key,
+                  canSelect: true
+                });
+              })} */}
+            </>
+          );
+        })}
         <button onClick={generateTest} className="testing__btn btn">
           Заного
         </button>
         <button
-          onClick={() => this.setState({redirect: true})}
+          onClick={() => this.setState({ redirect: true })}
           className="testing__btn btn"
         >
           Формулы
@@ -51,13 +89,13 @@ class Testing extends Component {
       <div className="testing">
         {questions}
         {result}
-        {redirect && <Redirect to='/' />}
+        {redirect && <Redirect to="/" />}
       </div>
     );
   }
 }
-const mapStateToProps = ({ test, actualQuestion, rightAnswers }) => {
-  return { test, actualQuestion, rightAnswers };
+const mapStateToProps = ({ test, actualQuestion, rightAnswers, answers }) => {
+  return { test, actualQuestion, rightAnswers, answers };
 };
 const mapDispatchToProps = {
   generateTest,

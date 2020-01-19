@@ -13,9 +13,11 @@ const withFormula = Wrapped => {
         }
         className={`formulae__formula ${
           props.selectedAnswers.indexOf(props.id) !== -1
-            ? 'formulae__formula-active'
+            ? 'formulae__formula_active'
             : ''
-        }`}
+        } ${
+          props.status !== undefined ? `formulae__formula_${props.status}` : ''
+        } ${props.selected ? 'formulae__formula_selected' : ''}`}
       >
         <Wrapped {...props} />
       </div>

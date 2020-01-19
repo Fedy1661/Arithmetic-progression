@@ -35,13 +35,14 @@ const initialState = {
   test: [],
   rightAnswers: 0,
   actualQuestion: null,
-  selectedAnswers: []
+  selectedAnswers: [],
+  answers: []
 };
 function getRandomInt(max) {
   return Math.floor(Math.random() * Math.floor(max));
 }
 
-const stirArr = (a, b) => {
+const stirArr = () => {
   return Math.random() - 0.5;
 };
 
@@ -76,7 +77,8 @@ export default (state = initialState, { type, payload }) => {
         ...state,
         rightAnswers: 0,
         actualQuestion: 0,
-        test: test.sort(stirArr)
+        test: test.sort(stirArr),
+        answers: []
       };
     case SELECT_ANSWER:
       if (state.selectedAnswers.indexOf(payload) === -1) {
@@ -113,7 +115,6 @@ export default (state = initialState, { type, payload }) => {
       } else {
         win = win >= 1 ? 1 : 0;
       }
-      console.log(countTrueAnswersInTest);
       return {
         ...state,
         rightAnswers: state.rightAnswers + win,
@@ -122,7 +123,8 @@ export default (state = initialState, { type, payload }) => {
           state.actualQuestion +
           (state.actualQuestion !== 4 && state.selectedAnswers.length !== 0
             ? 1
-            : 0)
+            : 0),
+        answers: [...state.answers, [...state.selectedAnswers]]
       };
     default:
       return state;
