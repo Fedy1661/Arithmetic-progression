@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { generateTest, nextQuestion, selectAnswer } from '../../actions';
+import { generateTest, nextQuestion } from '../../actions';
 import { connect } from 'react-redux';
 import { Redirect } from 'react-router-dom';
 
@@ -51,10 +51,8 @@ class Testing extends Component {
               <div className="testing__variants">
                 {testValue.variants.map((value, key) => {
                   let selected = false;
-                  console.log(answers[testId], key)
                   if (answers[testId].indexOf(key) !== -1) {
                     selected = true;
-                    console.log('TUREEE')
                   }
                   return React.cloneElement(value[0], {
                     key,
