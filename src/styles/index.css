@@ -36,7 +36,8 @@
   align-items: center;
   justify-content: center;
 }
-.formulae__formula:hover, .formulae__formula-active {
+/* .formulae__formula:hover,*/
+.formulae__formula-active {
   border: 2px solid;
   border-bottom-width: 4px;
   font-family: Roboto, sans-serif;
@@ -111,7 +112,6 @@ hr {
   color: rgba(30, 255, 188, 1);
   background: rgba(255, 255, 255, 1);
   transition: color 0.3s, background 0.5s;
-
 }
 .btn:hover {
   animation: stripes 0.75s infinite linear;
@@ -139,10 +139,11 @@ hr {
 b {
   font-weight: 900;
 }
-
+.testing{
+  text-align: center;
+}
 .testing__title {
   font-size: 30px;
-  text-align: center;
 }
 .testing__question {
   margin-top: 10px;

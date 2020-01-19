@@ -1,18 +1,23 @@
 import React, { Component } from 'react';
 import { generateTest, nextQuestion } from '../../actions';
 import { connect } from 'react-redux';
+import { Redirect } from 'react-router-dom';
 
 class Testing extends Component {
+  state = {
+    redirect: false
+  };
   componentDidMount() {
     this.props.generateTest();
   }
   render() {
-    const { test, actualQuestion, rightAnswers } = this.props;
+    const { test, actualQuestion, rightAnswers, generateTest } = this.props;
+    const { redirect } = this.state;
     const questions = actualQuestion !== null && actualQuestion !== 4 && (
       <>
         <h2 className="testing__title">Тестирование</h2>
         <h3 className="testing__question title">
-          {`${test[actualQuestion].question} #${actualQuestion+1}`}
+          {`${test[actualQuestion].question} #${actualQuestion + 1}`}
         </h3>
         <div className="testing__variants">
           {test[actualQuestion].variants.map((value, key) => {
@@ -29,12 +34,24 @@ class Testing extends Component {
       </>
     );
     const result = actualQuestion === 4 && (
-    <h2 className="testing__title">{`Результат ${rightAnswers}/${test.length}`}</h2>
+      <>
+        <h2 className="testing__title">{`Результат ${rightAnswers}/${test.length}`}</h2>
+        <button onClick={generateTest} className="testing__btn btn">
+          Заного
+        </button>
+        <button
+          onClick={() => this.setState({redirect: true})}
+          className="testing__btn btn"
+        >
+          Формулы
+        </button>
+      </>
     );
     return (
       <div className="testing">
         {questions}
         {result}
+        {redirect && <Redirect to='/' />}
       </div>
     );
   }
