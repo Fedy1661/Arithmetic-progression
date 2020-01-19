@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/Arithmetic-progression/static/css/main.d9f4cb9d.chunk.css",
-    "main.js": "/Arithmetic-progression/static/js/main.db8cf1db.chunk.js",
-    "main.js.map": "/Arithmetic-progression/static/js/main.db8cf1db.chunk.js.map",
+    "main.css": "/Arithmetic-progression/static/css/main.89a2a21e.chunk.css",
+    "main.js": "/Arithmetic-progression/static/js/main.9a71f3d1.chunk.js",
+    "main.js.map": "/Arithmetic-progression/static/js/main.9a71f3d1.chunk.js.map",
     "runtime-main.js": "/Arithmetic-progression/static/js/runtime-main.d6655622.js",
     "runtime-main.js.map": "/Arithmetic-progression/static/js/runtime-main.d6655622.js.map",
-    "static/js/2.575ec35b.chunk.js": "/Arithmetic-progression/static/js/2.575ec35b.chunk.js",
-    "static/js/2.575ec35b.chunk.js.map": "/Arithmetic-progression/static/js/2.575ec35b.chunk.js.map",
+    "static/js/2.20ef5df8.chunk.js": "/Arithmetic-progression/static/js/2.20ef5df8.chunk.js",
+    "static/js/2.20ef5df8.chunk.js.map": "/Arithmetic-progression/static/js/2.20ef5df8.chunk.js.map",
     "index.html": "/Arithmetic-progression/index.html",
-    "precache-manifest.81c558cfc40bf252d3afe888ce7b8c72.js": "/Arithmetic-progression/precache-manifest.81c558cfc40bf252d3afe888ce7b8c72.js",
+    "precache-manifest.2c46f4ac25edfb942fcd76353b745d60.js": "/Arithmetic-progression/precache-manifest.2c46f4ac25edfb942fcd76353b745d60.js",
     "service-worker.js": "/Arithmetic-progression/service-worker.js",
-    "static/css/main.d9f4cb9d.chunk.css.map": "/Arithmetic-progression/static/css/main.d9f4cb9d.chunk.css.map",
-    "static/js/2.575ec35b.chunk.js.LICENSE": "/Arithmetic-progression/static/js/2.575ec35b.chunk.js.LICENSE"
+    "static/css/main.89a2a21e.chunk.css.map": "/Arithmetic-progression/static/css/main.89a2a21e.chunk.css.map",
+    "static/js/2.20ef5df8.chunk.js.LICENSE": "/Arithmetic-progression/static/js/2.20ef5df8.chunk.js.LICENSE"
   },
   "entrypoints": [
     "static/js/runtime-main.d6655622.js",
-    "static/js/2.575ec35b.chunk.js",
-    "static/css/main.d9f4cb9d.chunk.css",
-    "static/js/main.db8cf1db.chunk.js"
+    "static/js/2.20ef5df8.chunk.js",
+    "static/css/main.89a2a21e.chunk.css",
+    "static/js/main.9a71f3d1.chunk.js"
   ]
 }
