@@ -38,9 +38,9 @@ const initialState = {
   selectedAnswers: [],
   answers: []
 };
-function getRandomInt(max) {
+const getRandomInt = max => {
   return Math.floor(Math.random() * Math.floor(max));
-}
+};
 
 const stirArr = () => {
   return Math.random() - 0.5;
@@ -58,15 +58,14 @@ export default (state = initialState, { type, payload }) => {
           randomInt = getRandomInt(questions.length);
           let randomInt2 = getRandomInt(questions[i].variants.length - 1);
           let question = questions[randomInt];
-          let comp = question.variants[randomInt2];
           let answer = [
-            comp,
+            question.variants[randomInt2],
             question.question === questions[i].question ? true : false
           ];
           if (variants.indexOf(randomInt + randomInt2) === -1) {
             answers.push(answer);
+            variants.push(randomInt + randomInt2);
           }
-          variants.push(randomInt + randomInt2);
         }
         test.push({
           question: questions[i].question,
@@ -124,7 +123,10 @@ export default (state = initialState, { type, payload }) => {
           (state.actualQuestion !== 4 && state.selectedAnswers.length !== 0
             ? 1
             : 0),
-        answers: state.selectedAnswers.length !== 0 ? [...state.answers, [...state.selectedAnswers]] : [...state.answers]
+        answers:
+          state.selectedAnswers.length !== 0
+            ? [...state.answers, [...state.selectedAnswers]]
+            : [...state.answers]
       };
     default:
       return state;
