@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import { generateTest, nextQuestion } from '../../actions';
 import { connect } from 'react-redux';
 import { Redirect } from 'react-router-dom';
@@ -44,7 +44,7 @@ class Testing extends Component {
         <h2 className="testing__title">{`Результат ${rightAnswers}/${test.length}`}</h2>
         {test.map((testValue, testId) => {
           return (
-            <>
+            <Fragment key={testId}>
               <h3 className="testing__question title">
                 {`${testValue.question} #${test.indexOf(testValue) + 1}`}
               </h3>
@@ -62,14 +62,7 @@ class Testing extends Component {
                   });
                 })}
               </div>
-              {/* {test[actualQuestion].variants.map((value, key) => {
-                return React.cloneElement(value[0], {
-                  key,
-                  id: key,
-                  canSelect: true
-                });
-              })} */}
-            </>
+            </Fragment>
           );
         })}
         <button onClick={generateTest} className="testing__btn btn">

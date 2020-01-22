@@ -51,20 +51,21 @@ export default (state = initialState, { type, payload }) => {
     case GENERATE_TEST:
       let test = [];
       for (let i = 0; i < questions.length; i++) {
-        let randomInt = getRandomInt(questions[i].variants.length);
-        let answers = [[questions[i].variants[randomInt], true]];
-        let variants = [i + randomInt];
+        let quetionIndex = i;
+        let variantIndex = getRandomInt(questions[i].variants.length);
+        let answers = [[questions[quetionIndex].variants[variantIndex], true]];
+        let variants = [quetionIndex + variantIndex];
         while (answers.length !== 4) {
-          randomInt = getRandomInt(questions.length);
-          let randomInt2 = getRandomInt(questions[i].variants.length - 1);
-          let question = questions[randomInt];
+          quetionIndex = getRandomInt(questions.length);
+          variantIndex = getRandomInt(questions[quetionIndex].variants.length);
+          let question = questions[quetionIndex];
           let answer = [
-            question.variants[randomInt2],
+            question.variants[variantIndex],
             question.question === questions[i].question ? true : false
           ];
-          if (variants.indexOf(randomInt + randomInt2) === -1) {
+          if (variants.indexOf(quetionIndex + variantIndex) === -1) {
             answers.push(answer);
-            variants.push(randomInt + randomInt2);
+            variants.push(quetionIndex + variantIndex);
           }
         }
         test.push({
