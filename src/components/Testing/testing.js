@@ -66,7 +66,7 @@ class Testing extends Component {
           );
         })}
         <button onClick={generateTest} className="testing__btn btn">
-          Заного
+          Заново
         </button>
         <button
           onClick={() => this.setState({ redirect: true })}
